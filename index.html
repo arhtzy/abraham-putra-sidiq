@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Muhammad Abraham Putra Sidiq</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #000000, #4b0082);
+            color: white;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: linear-gradient(135deg, #000000, #4b0082);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        header nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: white;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        header nav a:hover {
+            color: #ff79c6;
+        }
+
+        #scrollIndicator {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 5px;
+            background: linear-gradient(to right, #ff79c6, #654ea3);
+            width: 0%;
+            z-index: 9999;
+        }
+
+        .section {
+            padding: 100px 50px;
+            text-align: center;
+            position: relative;
+        }
+
+        .section:nth-child(odd) {
+            background: linear-gradient(135deg, #000000, #4b0082);
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            font-size: 2rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        h3 {
+            margin-top: 20px;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #ff79c6;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: #e0e0e0;
+        }
+
+        .parallax {
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+        }
+
+        #about {
+            background-image: url('about-background.jpg'); /* Replace with actual image */
+        }
+        .photo-border {
+        width: 150px; /* Ukuran border foto */
+        height: 150px; /* Tinggi border sama dengan lebarnya untuk lingkaran */
+        border: 5px solid #9a46d2f1; /* Warna border */
+        border-radius: 50%; /* Membuat bentuk lingkaran */
+        overflow: hidden; /* Memastikan foto tidak keluar dari lingkaran */
+        float: left; /* Memindahkan ke kiri */
+        margin-right: 20px; /* Memberikan jarak antara foto dan teks */
+        display: block;
+         }
+
+    .photo-border img {
+        width: 100%; /* Foto mengikuti lebar elemen parent */
+        height: 100%; /* Foto mengikuti tinggi elemen parent */
+        object-fit: cover; /* Memastikan foto terisi penuh tanpa terdistorsi */
+        object-position: center; /* Memusatkan foto jika ada cropping */
+        }
+
+        .skills, .contact {
+            max-width: 800px;
+            margin: auto;
+            text-align: left;
+            padding: 20px;
+        }
+
+        .contact input, .contact textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 2px solid #4b0082;
+            border-radius: 8px;
+            background-color: transparent;
+            color: white;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .contact input:focus, .contact textarea:focus {
+            border-color: #ff79c6;
+            outline: none;
+        }
+
+        .contact button {
+            background: #4b0082;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        .contact button:hover {
+            background: #ff79c6;
+            transform: scale(1.05);
+        }
+
+        .download {
+            margin-top: 20px;
+        }
+
+        .download a {
+            color: white;
+            text-decoration: none;
+            border: 2px solid white;
+            padding: 12px 25px;
+            border-radius: 8px;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .download a:hover {
+            background: white;
+            color: #4b0082;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: left;
+        }
+
+        ul li {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                font-size: 14px;
+            }
+
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            header nav a {
+                margin: 10px 0;
+            }
+
+            .section {
+                padding: 50px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="scrollIndicator"></div>
+    <header>
+        <h1>Muhammad Abraham Putra Sidiq</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#experience">Experience</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="section" id="about">
+        <div class="photo-border">
+            <img src="aba.jpg" alt="Your Photo" style="width: 100%; height: auto;">
+        </div>
+        <div>
+            <h2>About Me</h2>
+            <p>Muhammad Abraham Putra Sidiq</p>
+            <p>Jln Bungur No 39 RT 01 RW 01, Kebayoran Lama Selatan, Kebayoran Lama, Jakarta Selatan</p>
+            <p>085773475558 | abba.putra@gmail.com</p>
+            <p>Date of Birth: 08/08/1993 | Marital Status: Married</p>
+        </div>
+    </section>
+    
+
+    <section class="section" id="education">
+        <h2>Education</h2>
+        <p><b>Universitas Terbuka</b> - Management (GPA: 3.65)</p>
+        <p><b>SMA Negeri 90 Jakarta</b> - IPS (GPA: 8.65)</p>
+    </section>
+
+    <section class="section parallax" id="experience">
+        <h2>Experience</h2>
+        <div>
+            <h3>PT Puncak Progo Group</h3>
+            <p>Telemarketing Team Leader</p>
+            <ul>
+                <li>Supervise operational telemarketing team</li>
+                <li>Breakdown daily target</li>
+                <li>Create training material for staff</li>
+                <li>Managing report performance team and staff</li>
+            </ul>
+        </div>
+        <div>
+            <h3>PT Progo Puncak Group</h3>
+            <p>Audit Team Leader (Credit Analyst)</p>
+            <ul>
+                <li>Monitoring approval rate customers</li>
+                <li>Monitoring daily operation</li>
+                <li>Create dashboard looker studio</li>
+                <li>Analyze trend of fraudster</li>
+                <li>Collaborate with QC and internal team</li>
+            </ul>
+        </div>
+        <div>
+            <h3>PT Bank Jago Tbk</h3>
+            <p>Customer Service Lead</p>
+            <ul>
+                <li>Responsibility to achieve target SLA, FRT, CSAT Customer service</li>
+                <li>Monitoring handling ticket bad rating and hard compliance for give solution</li>
+                <li>Monitoring ticket APPK - OJK, Bilateral letter, and External department</li>
+                <li>Create script, workflow, and technical instructions</li>
+                <li>Coordinate with other roles to deal about the update cases</li>
+                <li>Ensure achievement of KPI and OKR customer service teams</li>
+                <li>Responsibility all agent understand service quality parameters</li>
+                <li>Prepare refreshment presentations and socialize new banking products</li>
+                <li>Drive development of strategies and initiatives that aligns with problem solving customer expectations</li>
+            </ul>
+            <p>Digital Service Lead - Onboarding</p>
+            <ul>
+                <li>Make daily capacity, and shift agent</li>
+                <li>Ensure all agent understand of AML, and fraud indication</li>
+                <li>Create a daily agent capacity schedule</li>
+                <li>Creating a standard account opening matrix</li>
+                <li>Responsible for account opening SLA and validity of customer documents</li>
+                <li>Create new scripts, workflows, team work instructions</li>
+            </ul>
+        </div>
+        <div>
+            <h3>PT Bank Neo Commerce Tbk</h3>
+            <p>KYC Admin & Customer Service Team Lead</p>
+            <ul>
+                <li>Responsibility to authenticity of customer documents</li>
+                <li>Responsible for SLA pending tickets, handling complaints, handling questions and social media reviews (Instagram, Facebook, Twitter)</li>
+                <li>Monitoring the accuracy of ticket escalations</li>
+                <li>Make refreshment and improve updated problem solving</li>
+            </ul>
+        </div>
+        <div>
+            <h3>PT KB Finansia Multi Finance</h3>
+            <p>Business Relationship Officer - Marketing</p>
+            <ul>
+                <li>Development the marketing area and cooperation with business partners</li>
+                <li>Ensuring SOP compliance for partners and agents</li>
+                <li>Determine individual targets and ensure achievement of sales areas</li>
+                <li>Ensuring break event points are achieved for business continuity</li>
+            </ul>
+        </div>
+        <div>
+            <h3>PT Sentraponselindo</h3>
+            <p>Area Coordinator - Marketing</p>
+            <ul>
+                <li>Collaborate with partners to achieve targets</li>
+                <li>Proposing types of promotions to support sales</li>
+                <li>Make sales report for presentation and next sales plan</li>
+                <li>Conduct training to all sales to stay in prime condition</li>
+            </ul>
+        </div>
+    </section>
+    
+
+    <section class="section parallax" id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>Google Data Studio</li>
+            <li>Google Workspace / MS Office</li>
+            <li>Marketing Script</li>
+            <li>Problem Solving</li>
+            <li>CRM Tools</li>
+            <li>Leadership</li>
+            <li>Innovation</li>
+            <li>Communicating</li>
+        </ul>
+    </section>
+    
+    <section class="section parallax" id="interests">
+        <h2>Interests</h2>
+        <ul>
+            <li>Vacation</li>
+            <li>Editing Video</li>
+            <li>Content Creator</li>
+        </ul>
+    </section>
+    
+
+    <section class="section" id="contact">
+        <h2>Contact Me</h2>
+        <div class="contact">
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+            <div class="download">
+                <a href="cv.pdf" download>Download CV <i class="fas fa-download"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Scroll Indicator Script
+        window.onscroll = () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById('scrollIndicator').style.width = scrolled + '%';
+        };
+    </script>
+</body>
+</html>
