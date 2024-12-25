@@ -94,22 +94,23 @@
             background-image: url('about-background.jpg'); /* Replace with actual image */
         }
         .photo-border {
-        width: 150px; /* Ukuran border foto */
-        height: 150px; /* Tinggi border sama dengan lebarnya untuk lingkaran */
-        border: 5px solid #9a46d2f1; /* Warna border */
-        border-radius: 50%; /* Membuat bentuk lingkaran */
-        overflow: hidden; /* Memastikan foto tidak keluar dari lingkaran */
-        float: left; /* Memindahkan ke kiri */
-        margin-right: 20px; /* Memberikan jarak antara foto dan teks */
-        display: block;
-         }
+    width: 180px; /* Ukuran lingkaran diperbesar */
+    height: 180px; /* Tinggi sesuai lebar untuk lingkaran */
+    border: 5px solid #9a46d2f1; /* Warna border */
+    border-radius: 50%; /* Membuat bentuk lingkaran */
+    overflow: hidden; /* Memastikan foto tidak keluar dari lingkaran */
+    float: left; /* Memindahkan ke kiri */
+    margin-right: 15px; /* Memberikan jarak antara foto dan teks */
+    display: block;
+}
 
-    .photo-border img {
-        width: 100%; /* Foto mengikuti lebar elemen parent */
-        height: 100%; /* Foto mengikuti tinggi elemen parent */
-        object-fit: cover; /* Memastikan foto terisi penuh tanpa terdistorsi */
-        object-position: center; /* Memusatkan foto jika ada cropping */
-        }
+.photo-border img {
+    width: 100%; /* Foto mengikuti lebar lingkaran */
+    height: 100%; /* Foto mengikuti tinggi lingkaran */
+    object-fit: cover; /* Mengisi penuh tanpa distorsi */
+    object-position: top center; /* Memastikan wajah berada di tengah */
+}
+
 
         .skills, .contact {
             max-width: 800px;
@@ -227,7 +228,7 @@
             <p>Muhammad Abraham Putra Sidiq</p>
             <p>Jln Bungur No 39 RT 01 RW 01, Kebayoran Lama Selatan, Kebayoran Lama, Jakarta Selatan</p>
             <p>085773475558 | abba.putra@gmail.com</p>
-            <p>Date of Birth: 08/08/1993 | Marital Status: Married</p>
+                 <p>Date of Birth: 08/08/1993 | Marital Status: Married</p>
         </div>
     </section>
     
